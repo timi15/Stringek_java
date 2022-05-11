@@ -134,7 +134,11 @@ public class Gyakorlas0511 {
           System.out.println(s.startsWith("ab")); // false, nem meglepő
           System.out.println(s.toLowerCase().startsWith("ab")); // true!
 
+          
+          
+          
           //String karaktereinek cseréje – replace(), replaceFirst()
+          
           System.out.println(s.replace("a", "A")); // AbrAkAdAbrA
           System.out.println(s.replace("z", "A")); // abrakadabra
           // Nem volt mit cserélni, maradt az eredeti.
@@ -153,6 +157,7 @@ public class Gyakorlas0511 {
           
           
           //String részének kinyerése – substring()
+          
           System.out.println(s.substring(0, 5)); // abrak
           System.out.println(s.substring(2, 5)); // rak
           System.out.println(s.substring(5, 8)); // ada
@@ -162,6 +167,7 @@ public class Gyakorlas0511 {
           
           
           //A String tartalmazza-e? – contains()
+          
           System.out.println(s.contains("rak")); // true
           System.out.println(s.contains("Rak")); // false
           System.out.println(s.contains("abra")); // true (a vegen van!)
@@ -171,6 +177,7 @@ public class Gyakorlas0511 {
           
           
           //String szétdarabolása – split()
+          
           String nevsor = "Geza Eva Pal";
           String[] nevek = nevsor.split(" "); // { "Geza", "Eva", "Pal" }
           for (String e : nevek) {
