@@ -5,14 +5,20 @@ public class Gyakorlas0511 {
      public static void main(String[] args) {
 
           //STRING
+          
           // Stringek egyenlőségének vizsgálata – equals()
           // Objektumok között az == operátorral végzett egyenlőség vizsgálat nem használható!
+          
           String s1 = "abcd";
           String s2 = new String("abcd");
 
           System.out.println(s1.equals(s2));
 
+          
+          
+          
           //Stringek összefűzése – concat()
+          
           String s = "Indul";
           s = s.concat(" a");
           s = s.concat(" gorog");
@@ -20,19 +26,29 @@ public class Gyakorlas0511 {
 
           System.out.println(s);
 
+          
+          
           // Stringek hossza – length()
           // Bármely String méretét (hosszát) megkaphatjuk, ha meghívjuk a length() metódusát:
+          
           System.out.println(s.length());
 
+          
+          
           // String adott karaktere – charAt()
+          
           System.out.println(s.charAt(3)); // a 4. karakter (3-as index!)
 
           System.out.println(s.charAt(0)); // első karakter (üres Stringre indexelési hiba!)
 
           System.out.println(s.charAt(s.length() - 1)); // utolsó karakter
 
+          
+          
+          
           // Stringek összehasonlítása rendezés miatt – compareTo()
           // Az összehasonlítás megkülönbözteti a kis és nagybetűket!
+          
           String nev = "Geza";
           String nev2 = "Bela";
           System.out.println(nev.compareTo(nev2)); // 5
@@ -43,6 +59,7 @@ public class Gyakorlas0511 {
            * jelenti, hogy annál a pontnál, ahol a két String különbözik
            * a két összehasonlított karakter távolsága 5 (B-G)
            */
+          
           String s3 = "Geza";
           String s4 = "bela";
           System.out.println(s3.compareTo(s4)); // -27
@@ -52,17 +69,25 @@ public class Gyakorlas0511 {
            * a nagybetűk megelőzik a kisbetűket, és a compareTo() figyelembe
            * veszi ezt. Ez kiküszöbölhető a következő metódussal:
            */
+          
           System.out.println(s3.compareToIgnoreCase(s4)); // 5
 
           /* a compareToIgnoreCase() metódus úgy hasonlítja össze a Stringeket,
            * hogy figyelmen kívül hagyja a kis és nagybetűk közötti különbségeket.
            */
+          
+          
+          
           //Stringek kis-nagybetűs átalakítása – toLowerCase() és toUpperCase()
+          
           String nevem = "Miko Csaba";
           System.out.println(nevem.toUpperCase()); // "MIKO CSABA"
           System.out.println(nevem.toLowerCase()); // "miko csaba"
 
+          
+          
           //Keresés Stringben – indexOf(), lastIndexOf()
+          
           String d = "abrakadabra";
           System.out.println(d.indexOf("rak")); // 2
           //  A 2. indexű (3. karakternél) található a rak szócska.
@@ -89,6 +114,7 @@ public class Gyakorlas0511 {
            * akarjuk megkeresni, akkor megadjuk, hogy az első utáni pozíciótól
            * induljunk. Ezt a két lépést akár össze is vonhatjuk:
            */
+          
           System.out.println(s.indexOf("r", s.indexOf("r") + 1));
 
           System.out.println(s.lastIndexOf("br", s.lastIndexOf("br") - 1));
@@ -97,7 +123,10 @@ public class Gyakorlas0511 {
            * kell az első találat helyéhez képest, mivel visszafelé keresünk
            */
 
+          
+          
           //String kezdete és vége – startsWith(), endsWith()
+          
           System.out.println(s.startsWith("ab")); // true
           System.out.println(s.endsWith("ab")); // false
           System.out.println(s.startsWith("Ab")); // false(!)
@@ -120,6 +149,9 @@ public class Gyakorlas0511 {
            * de itt sem felejtetted el: kis-nagybetű érzékeny metódus!
            */
 
+          
+          
+          
           //String részének kinyerése – substring()
           System.out.println(s.substring(0, 5)); // abrak
           System.out.println(s.substring(2, 5)); // rak
@@ -127,6 +159,8 @@ public class Gyakorlas0511 {
           System.out.println(s.substring(6));   // dabra
           System.out.println(s.substring(s.length())); // mindig üres String
 
+          
+          
           //A String tartalmazza-e? – contains()
           System.out.println(s.contains("rak")); // true
           System.out.println(s.contains("Rak")); // false
@@ -134,6 +168,8 @@ public class Gyakorlas0511 {
           System.out.println(s.contains("abrak")); // false
           System.out.println(s.toLowerCase().contains("abrak")); // true(!)
 
+          
+          
           //String szétdarabolása – split()
           String nevsor = "Geza Eva Pal";
           String[] nevek = nevsor.split(" "); // { "Geza", "Eva", "Pal" }
